@@ -61,10 +61,13 @@ private static final double DELTA = 0.00000001;
         Sqrt sqrt = new Sqrt(9.0);
         assertEquals(9.0, sqrt.arg, DELTA);
     }
-    
-    @Test(expected = IllegalArgumentException.class)
-    public void testNegativeInput() {
-        new Sqrt(-1.0).calc();
+
+    @Test
+    public void testSqrtNegative() {
+
+        assertThrows(IllegalArgumentException.class, () -> {
+        Sqrt sqrt = new Sqrt(-1.0);});
+
     }
 
      @Test
