@@ -76,6 +76,6 @@ private static final double DELTA = 0.00000001;
     @Test
     public void testSqrt10() {
         Sqrt sqrt = new Sqrt(10.0);
-        assertEquals(Math.sqrt(10.0), sqrt.calc(), sqrt.getDelta());
+        assertEquals(Math.sqrt(10.0), sqrt.calc(), DELTA);
     }
 }
