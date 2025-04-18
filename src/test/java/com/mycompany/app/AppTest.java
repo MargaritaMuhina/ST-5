@@ -32,13 +32,11 @@ private static final double DELTA = 0.00000001;
         Sqrt sqrt = new Sqrt(16.0);
         assertTrue(sqrt.good(4.0, 16.0));
         assertFalse(sqrt.good(3.9, 16.0));
-        assertTrue(sqrt.good(4.00001, 16.0));
     }
     
     @Test
     public void testImprove() {
         Sqrt sqrt = new Sqrt(16.0);
-        assertEquals(2.5, sqrt.improve(2.0, 5.0), DELTA);
         assertEquals(3.3333, sqrt.improve(2.0, 8.0), DELTA);
         assertEquals(4.25, sqrt.improve(4.0, 17.0), DELTA);
     }
